@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Vulnerability Scanner</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="scanner-card">
+      <h2 class="title">🔒 URL Vulnerability Scanner</h2>
+      <div class="input-wrapper">
+        <input type="text" id="urlInput" placeholder="Enter URL">
+        <button id="scanBtn">Scan</button>
+      </div>
+      <div class="progress-bar" id="progressBar"></div>
+      <div class="status-box">
+        <p><strong>Status:</strong> <span id="status">Awaiting scan...</span></p>
+        <p><strong>Reason:</strong> <span id="reason">No issues detected</span></p>
+        <p><strong>Score:</strong> <span id="score">--</span></p>
+      </div>
+    </div>
+  </div>
+  <script src="/static/script.js" defer></script>
+</body>
+</html>

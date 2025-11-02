@@ -1,0 +1,125 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  padding: 1rem;
+}
+
+.scanner-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scanner-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(41, 121, 255, 0.3);
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0d47a1;
+  text-align: center;
+  margin: 0;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #cfd8ff;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  border-color: #2979ff;
+  box-shadow: 0 0 6px rgba(41, 121, 255, 0.5);
+}
+
+button {
+  background-color: #2979ff;
+  border: none;
+  color: white;
+  padding: 0 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #1565c0;
+  transform: translateY(-2px);
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 6px;
+  width: 0%;
+  background-color: #2979ff;
+  border-radius: 6px;
+  transition: width 2s ease;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+/* Status Box */
+.status-box {
+  background-color: #f0f6ff;
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.safe {
+  color: #0f9d58;
+  font-weight: 700;
+}
+
+.risky {
+  color: #ff9800;
+  font-weight: 700;
+}
+
+.unsafe {
+  color: #d93025;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .scanner-card {
+    padding: 1.5rem;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+}
